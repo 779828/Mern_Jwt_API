@@ -32,7 +32,7 @@ h1,
 h2,
 h3 {
   font-weight: 600;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 .container {
@@ -89,14 +89,23 @@ h3 {
 .goals {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 25px;
 }
 
 .goal {
-  background-color: #f4f4f4;
+  border-radius: 20px;
+  background-color: #e4b2b2;
   margin: 10px 0;
-  padding: 20px 0 10px;
+  padding: 40px 20px 30px;
   position: relative;
+  box-shadow: 0px 5px 20px #000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.goal:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
 }
 
 .goal .close {
@@ -106,6 +115,15 @@ h3 {
   cursor: pointer;
   border: none;
   background: none;
+}
+
+.text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #332727;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
+  cursor: pointer;
 }
 
 .form,
