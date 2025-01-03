@@ -2,7 +2,7 @@ import axios from "axios";
 
 const API_URL = "/api/goals/";
 
-// CreateGoal new goal
+// Create new goal
 const createGoal = async (goalData, token) => {
   const config = {
     headers: {
@@ -40,6 +40,7 @@ const deleteGoal = async (goalId, token) => {
 
   return response.data;
 };
+
 const goalService = {
   createGoal,
   getGoals,
