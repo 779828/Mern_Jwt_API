@@ -8,11 +8,11 @@ const register = async (userData) => {
   const response = await axios.post(API_URL, userData);
 
   if (response.data) {
-    const expirationInMinutes = 10;
+    const expirationInMinutes = 60;
     const expirationDate = new Date();
     expirationDate.setTime(
       expirationDate.getTime() + expirationInMinutes * 60 * 1000
-    ); // 10 minutes
+    ); // minutes
 
     Cookies.set("user", JSON.stringify(response.data), {
       expires: expirationDate,
@@ -27,11 +27,11 @@ const login = async (userData) => {
   const response = await axios.post(API_URL + "login", userData);
 
   if (response.data) {
-    const expirationInMinutes = 10;
+    const expirationInMinutes = 60;
     const expirationDate = new Date();
     expirationDate.setTime(
       expirationDate.getTime() + expirationInMinutes * 60 * 1000
-    ); // 10 minutes
+    ); // minutes
 
     Cookies.set("user", JSON.stringify(response.data), {
       expires: expirationDate,
