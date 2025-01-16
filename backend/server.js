@@ -11,7 +11,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["https://mern-jwt-app.vercel.app"],
+    origin: ["https://mern-jwt-app.vercel.app", "http://localhost:3000"],
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
